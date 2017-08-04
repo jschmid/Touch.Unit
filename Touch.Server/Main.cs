@@ -110,9 +110,7 @@ class SimpleListener {
 			// a few extra bits of data only available from this side
 			string header = String.Format ("[Local Date/Time:\t{1}]{0}[Remote Address:\t{2}]{0}", 
 				Environment.NewLine, DateTime.Now, remote);
-			byte[] array = Encoding.UTF8.GetBytes (header);
-			fs.Write (array, 0, array.Length);
-			fs.Flush ();
+			Console.WriteLine(header);
 			// now simply copy what we receive
 			int i;
 			int total = 0;
